@@ -14,7 +14,7 @@ const handleAuth = (req, res) => {
 };
 
 // Callback endpoint for OAuth
-const handleCallback = async (req, res) => {
+const handleOAuthCallback = async (req, res) => {
     const { code } = req.query;
 
     if (!code) {
@@ -42,5 +42,5 @@ const handleCallback = async (req, res) => {
 
 module.exports = {
     handleAuth,
-    handleCallback
+    handleOAuthCallback
 }
